@@ -2,7 +2,7 @@
 
 """
 Extract configs from fasta file.                                                                               
-python3 %Prog Input.fasta wanted_ID_list.txt                                                    
+python3 %Prog -i <Input.fasta> -l <wanted_ID_list.txt>                                                    
 """                                                                                 
 import sys,re                                                                          
 import argparse
@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description="Extract configs from fasta file. \nResults: 1. fasta with required contigs, 2. fasta with remaining contigs.", 
                                      epilog='''Usage example:
-                                           python3 Extract_contigs.py -i <fasta_file> -l <list_Ids>''',
+                                           python3 %Prog -i <Input.fasta> -l <wanted_ID_list.txt>''',
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("-i","--infile",help="Input fasta file", required=True)
     parser.add_argument("-l","--list",help="Input interesting sequence IDs, one per line, ending with '.txt'", required=True)
