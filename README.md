@@ -2,4 +2,6 @@
 Shared python scripts
 
 ## FASTA file processing
-`BLAST.sh` - BLAST shell (blastn & blastp, makeblastdb blastxml_to_tabular.py
+`Remove_short_contigs_fasta_files_in_a_fold.py` - Remove short contigs for all fasta_files in a fold
+
+`Extract_contigs_left2remains.py` - Extract desired contigs & the rest contigs go to another file
