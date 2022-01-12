@@ -21,7 +21,8 @@ ftp://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_genbank.txt
 
 
 import sys, os
-import subprocess  
+import subprocess 
+from os import path 
 from subprocess import PIPE, Popen
 
 
@@ -50,7 +51,7 @@ def readingCatalog(infile):
 
 def readgenomeIDs(infile):
     with open(infile) as I:
-        return {line.strip() for line in I}
+        return {line.strip() for line in I if not line == ''}
 
 def perform(Catalog,IDs):
     for id in IDs:
@@ -73,7 +74,7 @@ def perform(Catalog,IDs):
 if __name__ == '__main__':
     report_file = 'assembly_summary_genbank.txt'
     if not path.exists(report_file):
-        dw_file = "wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz"
+        dw_file = "wget ftp://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/assembly_summary_genbank.txt"
         my_run(dw_file)
         
     Genomic_Catalog= readingCatalog(report_file)
