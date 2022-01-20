@@ -13,7 +13,7 @@ def Main(fasta_file, wanted_IDs,suffix):
     result_file1 = fasta_file.replace('.%s'%suffix,'_%s_extracted.%s'%(basename, suffix))
     result_file2 = fasta_file.replace('.%s'%suffix,'_remained.%s'%suffix)
 
-    wanted = [line.strip() for line in open(wanted_IDs) if not line == '']  # Use this line if there is 'gi|' in the seq.id, list contains only seq.id
+    wanted = [line.strip() for line in open(wanted_IDs) if not line == ''] 
 
     print("Extract %s contigs to %s" %(len(wanted), result_file1))
     print("Resulted remaining file: %s" %result_file2)
