@@ -1,5 +1,5 @@
 # Share
-Shared python scripts
+Shared Bioinformatic protocols and python scripts
 
 `Downloading from the NCBI Sequence Read Archive (SRA)` - Download SRA from NCBI and convert to fastq 
 
