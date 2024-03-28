@@ -1,0 +1,106 @@
+Downloading from the NCBI Sequence Read Archive (SRA)
+
+1. Obtain a list of run accession numbers from the SRA
+
+1.1 Search the SRA list:
+This can be done by searching for the SRA or SRP number in the SRA database (or by searching for the PRJ number in the BioProject database). See the NCBI's documentation for more information about what all the accession numbers mean and how they're linked. For example, searching for the SRA accession number SRA045646 yields 370 metagenomic experiments. The SRA list can also be found by searching the BioProject Accession number (PRJNA422434), and then click Number of Links on the row of SRA Experiments.
+
+1.2 Collect the run IDs for the experiments:
+1. A .txt file with one run ID per line, by selecting "Send to"-> File and choosing "Accession List" for the format. This method works if each sample has only one associated run.
+2. a table of run IDs, with additional metadata, by selecting "Send to"-> File and choosing "RunInfo" for the format. This may be required if you have samples which required multiple sequencing runs (e.g. the sequencing was split across multiple lanes). Some extra effort will be required to merge the resulting FASTQs in this case (not covered in this tutorial).
+
+More information about this is here: https://www.ncbi.nlm.nih.gov/books/NBK158899/
+
+2. Download the sequencing files
+
+Method I (Two steps):
+
+Step One: Get SRA file first:
+Using separated downloading allows guarding against network issues when trying to, for example, concatenate many runs belonging to a single sample. There are at least two ways to download the files.
+
+Using prefetch (recommended)
+NCBI's SRA Toolkit comes with a command named prefetch that takes a run accession as an argument and stores the run in a user folder (~/ncbi/public/sra/). 
+
+ >prefetch SRR1778456
+
+Using wget
+Download the files using wget. You can form the URL for each file like so (note that the first 3 digits of the identifier is used as a subdirectory):
+
+ >wget ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR177/SRR1778456/SRR1778456.sra
+This will download a file with a suffix .sra
+
+or download the RunInfo on the list of SRA, as the same method to download the SRA accession list, then find the download_path in the csv file
+
+ >wget https://sra-download.ncbi.nlm.nih.gov/traces/sra25/SRR/001736/SRR1778456
+This will download a SRA file without suffix.
+1. On NCBI website, find the BioProject for the dataset
+2. Click the number in the column of “Number of Links” for “SRA Experiments”
+3. On the SRA page, click “Send to”, select File and “RunInfo” in the Format box, then click “Create File”
+4. In the downloaded csv file, find ‘download_path’ for the file to download
+i.e., https://sra-download.ncbi.nlm.nih.gov/traces/sra1/SRR/011627/SRR11906179
+5. Put the download path in shell file (download_from_ncbi.sh), launch the shell by command:
+qsub download_from_ncbi.sh
+
+Step Two: Convert to FASTQ
+
+Use the SRA Toolkit's fastq-dump command to convert to fastq (unpak)
+
+>fastq-dump --outdir DST_FOLDER --split-files ~/ncbi/public/sra/SRR1778456.sra
+>fastq-dump --outdir DST_FOLDER ~/ncbi/public/sra/SRR3208484.sra
+
+	--split-files   will split the files into forward and reverse reads
+	--outdir or -O  specifies the directory to place the converted fastq files
+	-F specifies that the original ids be used (instead of those changed by the SRA)
+	--skip-technical some sequencing technologies will have other reads besides forward and reverse. This skips those.
+	--gzip can be added as an option if you would like the fastq files to be gzipped (this saves space, but takes much longer to do the conversion).
+
+Method II (Two steps):
+ 
+  Use fastq-dump command to download and dump FASTQs in one go.
+ 
+For paired sequence (Layout: PAIRED) 
+ >fastq-dump -F --split-files -O fastq SRR1778456
+
+ For single sequence (Layout: SINGLE) 
+ >fastq-dump -F  -O fastq SRR3208484
+
+This will automatically download the .sra file to ~/ncbi/public/sra/, and then convert the .sra file into fastq files in a folder named fastq in the current working folder.
+ 
+ 
+3. <Option> to download all the files, wrap it in a shell script loop or use parallel:
+Many methods can do this work, here are two examples: 
+ 
+ 1) created a list of identifiers for all SRA in project (named cat_list).
+   >for i in `cat_list`;do prefetch -v “$i”;done
+ 
+ 2) use parallel
+ For prefetch:
+ >parallel -j 1 prefetch {} ::: $(cat SraAccList.txt)
+ >parallel -j 1 fastq-dump --skip-technical -F --split-files -O fastq {} ::: $(cat SraAccList.txt)
+ 
+ For wget:
+ >parallel -j 1 \    wget -P sra ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByRun/sra/{='$_=substr($_,0,3)'=}/{='$_=substr($_,0,6)'=}/{}/{}.sra \
+   ::: $(cat SraAccList.txt) 
+ >parallel -j 1 fastq-dump --skip-technical -F --split-files -O fastq {} ::: sra/*
+ 
+3) Create a bash file using wget and fastq-dump
+#!/bin/bash
+#$ -S /bin/bash
+. /etc/profile
+#$ -o SmProject.log
+#$ -cwd
+#$ -pe threaded  8
+cd /scratch3/dzhao/metagenomes/SmProject
+wget https://sra-download.ncbi.nlm.nih.gov/traces/era11/ERR/ERR695/ERR695595
+fastq-dump --skip-technical -F --split-files -O fastq ERR695595
+
+### save the .sh file in the directory SmProject. This will download a file ERR695595 and then the coresponding _1.fastq and _2.fastq in the fastq directory.
+### the download address is from the RunInfo.csv
+
+---------------------------------------------------------------------------------
+Adapted from:
+https://github.com/LangilleLab/microbiome_helper/wiki/Download_From_SRA
+
+And thanks to Dayana's help documentation. 
+
+Updated Mar 2, 2021
