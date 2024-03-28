@@ -1,6 +1,8 @@
 # Share
 Shared python scripts
 
+`Downloading from the NCBI Sequence Read Archive (SRA)` - Download SRA from NCBI and convert to fastq 
+
 ## FASTA file processing
 `Remove_short_contigs_fasta_files_in_a_fold.py` - Remove short contigs for all fasta_files in a fold
 
