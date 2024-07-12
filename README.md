@@ -6,15 +6,13 @@ Welcome to BioInfoPythonScripts! This repository is tailored for experienced Pyt
 
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Scripts](#scripts)
+3. [Scripts](#scripts)
     1. [Sequencing Analysis](#sequencing-analysis)
     2. [Data Processing](#data-processing)
     3. [Data Visualization](#data-visualization)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
+4. [Contributing](#contributing)
+5. [License](#license)
+6. [Contact](#contact)
 
 ## Introduction
 
