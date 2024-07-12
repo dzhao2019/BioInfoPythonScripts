@@ -1,14 +1,38 @@
-# Share
-Shared Bioinformatic protocols and python scripts
+# BioInfoPythonScripts
 
-`Downloading from the NCBI Sequence Read Archive (SRA)` - Download SRA from NCBI and convert to fastq 
+Welcome to BioInfoPythonScripts! This repository is tailored for experienced Python users and contains a personal collection of Python scripts for bioinformatics. Focused on sequencing analysis, data processing, and data visualization, these scripts utilize powerful libraries such as NumPy, pandas, and seaborn. Whether you're working on genome sequencing, RNA-seq data analysis, or complex data visualizations, you'll find useful tools and examples here to enhance your bioinformatics workflows. Dive into efficient, well-documented code designed to tackle real-world bioinformatics challenges.
 
-## FASTA file processing
-`Remove_short_contigs_fasta_files_in_a_fold.py` - Remove short contigs for all fasta_files in a fold
+## Table of Contents
 
-`Extract_contigs_left2remains.py` - Extract desired contigs & the rest contigs go to another file
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Scripts](#scripts)
+    1. [Sequencing Analysis](#sequencing-analysis)
+    2. [Data Processing](#data-processing)
+    3. [Data Visualization](#data-visualization)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
 
-## Download GenBank genomes
-`NCBI_genome_download.py` - Download genomes from NCBI genbank by giving a list of genome accession numbers
+## Introduction
 
-`NCBI_genome_download_using_centrifuge.sh` - using centrifuge-download command to download NCBI genomes, based on domain(s) 
+This repository provides a collection of Python scripts designed for bioinformatics tasks. The scripts are intended for users who have a solid understanding of Python and are looking to apply their skills to bioinformatics challenges.
+
+## Prerequisites
+
+Before using these scripts, ensure you have the following installed:
+
+- Python 3.6 or higher
+- NumPy
+- pandas
+- seaborn
+- Biopython
+- Matplotlib
+- scikit-learn
+
+You can install these dependencies using pip:
+
+```bash
+pip install numpy pandas seaborn biopython matplotlib scikit-learn
