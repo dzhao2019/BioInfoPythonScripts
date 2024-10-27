@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Load the data from a CSV file into a DataFrame
-df = pd.read_csv('london_rainfall.csv')
+df = pd.read_csv('Diamond_results.csv')
 
 # Display the first 5 rows of the DataFrame to get a quick look at the data
 print("\ndf.head():")
@@ -22,4 +22,4 @@ print("\nLast 10 rows of data (df2):")
 print(df2)
 
 # Save the new DataFrame (df2) to a CSV file without the index column
-df2.to_csv('london_rainfall_1.csv', index=False)
+df2.to_csv('Diamond_results_t10.csv', index=False)
