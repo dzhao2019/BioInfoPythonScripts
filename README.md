@@ -39,7 +39,9 @@ All the Data used in the scripts can be found here:
 
 ### Data Processing
 [Example1_Exploring_and_Saving_Data_with_Pandas](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data%20Processing/Example1_Exploring_and_Saving_Data_with_Pandas.py)
+
 [Example2_Filtering_Summarizing_BLAST_results](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data%20Processing/Example2_Filtering_Summarizing_BLAST_results.py)
+
 [Example3_Handling_Missing_Data](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data%20Processing/Example3_Handling_Missing_Data.py)
 
 ### Data Visualization
