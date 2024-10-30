@@ -10,8 +10,6 @@ Welcome to BioInfoPythonScripts! This repository is tailored for experienced Pyt
     1. [Data Processing](#data-processing)
     2. [Data Visualization](#data-visualization)
 4. [Contributing](#contributing)
-5. [License](#license)
-6. [Contact](#contact)
 
 ## Introduction
 
@@ -33,3 +31,23 @@ You can install these dependencies using pip:
 
 ```bash
 pip install numpy pandas seaborn biopython matplotlib scikit-learn
+```
+
+## Scripts
+
+All the Data used in the scripts can be found here: [Data](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data)
+
+### Data Processing
+[Example1_Exploring_and_Saving_Data_with_Pandas](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example1_Exploring_and_Saving_Data_with_Pandas.py)
+
+[Example2_Filtering_Summarizing_BLAST_results](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example2_Filtering_Summarizing_BLAST_results.py)
+
+[Example3_Handling_Missing_Data](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example3_Handling_Missing_Data.py)
+
+### Data Visualization
+
+
+## Contributing
+Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
