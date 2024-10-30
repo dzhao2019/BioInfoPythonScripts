@@ -117,3 +117,24 @@ print("\nGenomes of the Kingdom 'Animals':")
 print(animals.head())
 
 
+
+# Aggregating data with .groupby()
+# Group genomes by 'Kingdom' and calculate the mean size for each kingdom
+grouped_kingdom = euk.groupby("Kingdom")[["Size (Mb)"]].mean()
+print("\nMean size of genomes by Kingdom:")
+print(grouped_kingdom)
+
+# Group by 'Class' and count the number of genomes in each class
+grouped_class_count = euk.groupby("Class").size()
+print("\nNumber of genomes in each Class:")
+print(grouped_class_count)
+
+# Group by 'Publication year' and calculate the maximum number of genes for each year
+grouped_year_max_genes = euk.groupby("Publication year")["Number of genes"].max()
+print("\nMaximum number of genes by Publication year:")
+print(grouped_year_max_genes)
+
+# Group by 'Assembly status' and calculate the median GC percentage for each status
+grouped_assembly_gc = euk.groupby("Assembly status")["GC%"].median()
+print("\nMedian GC% by Assembly status:")
+print(grouped_assembly_gc)
