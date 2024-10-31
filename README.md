@@ -47,11 +47,17 @@ All the Data used in the scripts can be found here: [Data](https://github.com/dz
 ### Data Visualization
 
 Example1 scatter_plot
+
 Example2 Histplot
+
 Example3_bar_plot
+
 Example4_box_plot monthly vs violin plot
+
 Example5_Heatmap
+
 Example6_FacetGrid
+
 Example7_catplot box
 
 
