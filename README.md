@@ -44,7 +44,7 @@ All the Data used in the scripts can be found here: [Data](https://github.com/dz
 
 [Example3_Handling_Missing_Data](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example3_Handling_Missing_Data.py)
 
-[DNA Sequence Data Processing](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data_Processing/DNA%20Sequence%20Data%20Processing)
+#### [DNA Sequence Data Processing](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data_Processing/DNA%20Sequence%20Data%20Processing)
 
 [Remove_short_contigs_fasta_files_in_a_fold](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/DNA%20Sequence%20Data%20Processing/Remove_short_contigs_fasta_files_in_a_fold.py)
 
