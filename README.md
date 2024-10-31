@@ -47,7 +47,7 @@ All the Data used in the scripts can be found here: [Data](https://github.com/dz
 ### Data Visualization
 
 Example1 scatter_plot
-
+![Example1_scatter_plot_Jan Feb Mar_style](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Visualization/Example1_scatter_plot_Jan%20Feb%20Mar_style.png)
 Example2 Histplot
 
 Example3_bar_plot
