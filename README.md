@@ -37,14 +37,22 @@ pip install numpy pandas seaborn biopython matplotlib scikit-learn
 
 All the Data used in the scripts can be found here: [Data](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data)
 
-### [Data Processing](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data_Processing)
+### i.[Data Processing](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data_Processing)
 [Example1_Exploring_Data_with_Pandas](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example1_Exploring_Data_with_Pandas.py)
 
 [Example2_Basic_Data_selection](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example2_Basic_Data_selection.py)
 
 [Example3_Handling_Missing_Data](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example3_Handling_Missing_Data.py)
 
-### Data Visualization
+[DNA Sequence Data Processing](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data_Processing/DNA%20Sequence%20Data%20Processing)
+
+[Remove_short_contigs_fasta_files_in_a_fold](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/DNA%20Sequence%20Data%20Processing/Remove_short_contigs_fasta_files_in_a_fold.py)
+
+[NCBI_genome_download](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/DNA%20Sequence%20Data%20Processing/NCBI_genome_download.py)
+
+[Extract_contigs_left2remains](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/DNA%20Sequence%20Data%20Processing/Extract_contigs_left2remains.py)
+
+### ii.[Data Visualization](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data_Visualization)
 
 Example1 scatter_plot
 
