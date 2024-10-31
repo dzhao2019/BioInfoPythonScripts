@@ -37,7 +37,7 @@ pip install numpy pandas seaborn biopython matplotlib scikit-learn
 
 All the Data used in the scripts can be found here: [Data](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data)
 
-### i.[Data Processing](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data_Processing)
+### i.$\color{Black}{[Data Processing](https://github.com/dzhao2019/BioInfoPythonScripts/tree/main/Data_Processing)}
 [Example1_Exploring_Data_with_Pandas](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example1_Exploring_Data_with_Pandas.py)
 
 [Example2_Basic_Data_selection](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Processing/Example2_Basic_Data_selection.py)
