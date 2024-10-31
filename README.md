@@ -25,7 +25,6 @@ Before using these scripts, ensure you have the following installed:
 - seaborn
 - Biopython
 - Matplotlib
-- scikit-learn
 
 You can install these dependencies using pip:
 
@@ -106,6 +105,11 @@ All the Data used in the scripts can be found here: [Data](https://github.com/dz
 
 ![violin_plot](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Visualization/violin_plot%20Summer%20%26%20Winter%20in%20decades.png) 
 [Script](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Visualization/violin_plot%20Summer%20%26%20Winter%20in%20decades.py)
+
+ - Violin Plot with Overlaid Swarm Plot
+ - 
+![Violin Plot with Overlaid Swarm Plot](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Visualization/Violin%20Plot%20with%20Overlaid%20Swarm%20Plot_fill%20false.png)
+[Script](https://github.com/dzhao2019/BioInfoPythonScripts/blob/main/Data_Visualization/Violin%20Plot%20with%20Overlaid%20Swarm%20Plot.py) 
 
  - Cluster Heatmap of Seasonal Rainfall
 
