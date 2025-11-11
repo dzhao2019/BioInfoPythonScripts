@@ -1,7 +1,9 @@
 # Data Processing Examples
 
 
-This page contains examples of how to use pandas for data processing.
+## Description
+
+Scripts for parsing, converting, and processing bioinformatics data
 
 
 ## Table of Contents
