@@ -2,14 +2,6 @@
 
 Welcome to BioInfoPythonScripts! This repository is tailored for experienced Python users and contains a personal collection of Python scripts for bioinformatics. Focused on sequencing analysis, data processing, and data visualization, these scripts utilize powerful libraries such as NumPy, pandas, and seaborn. Whether you're working on genome sequencing, RNA-seq data analysis, or complex data visualizations, you'll find useful tools and examples here to enhance your bioinformatics workflows. Dive into efficient, well-documented code designed to tackle real-world bioinformatics challenges.
 
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Prerequisites](#prerequisites)
-3. [Scripts](#scripts)
-    1. [Data Processing](#data-processing)
-    2. [Data Visualization](#data-visualization)
-4. [Contributing](#contributing)
 
 ## Introduction
 
