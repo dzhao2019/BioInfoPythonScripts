@@ -69,11 +69,17 @@ BioInfoPythonScripts/
 │   ├── variant_calling/
 │   ├── snp_analysis/
 │   └── ...
-└── utilities/
-    ├── __init__.py
-    ├── file_parsers.py
-    └── plotting_utils.py
+├── utilities/
+│   ├── __init__.py
+│   ├── file_parsers.py
+│   └── plotting_utils.py
+└── Resources/
+    └── README.md
 ```
+
+## Resources
+
+The [`Resources/`](Resources/README.md) folder collects external resources for bioinformatics and Python data analysis, organized into GitHub repositories, books, and websites.
 
 ## Contributing
 Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
